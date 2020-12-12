@@ -1,0 +1,41 @@
+<div class="card text-white bg-dark">
+  <div class="card-header"><h3>SIMPLE CALCULATOR</h3></div>
+  <div class="card-body">
+    <div class="form-group d-flex flex-row">
+      <input
+        [(ngModel)]="num1"
+        type="number"
+        name="num1"
+        placeholder="Enter the number"
+        class="form-control"
+      />
+    </div>
+    <div class="form-group d-flex flex-row">
+      <input
+        [(ngModel)]="num2"
+        type="number"
+        name="num2"
+        placeholder="Enter the number"
+        class="form-control"
+      />
+    </div>
+    <div class="btnrow">
+      <button class="btn btn-success btn-circle btn-xl" (click)="sum()">
+        ADDITION
+      </button>
+      <button class="btn btn-success btn-circle btn-xl" (click)="sub()">
+        SUBTRACTION
+      </button>
+      <button class="btn btn-success btn-circle btn-xl" (click)="multi()">
+        MULTIPLY
+      </button>
+      <button class="btn btn-success btn-circle btn-xl" (click)="divide()">
+        DIVISON
+      </button>
+    </div>
+  </div>
+  <div class="card-footer">
+    <h6>{{ resultInput }}</h6>
+    <h4>Your result: {{ result | number: "1.2-2" }}</h4>
+  </div>
+</div>
