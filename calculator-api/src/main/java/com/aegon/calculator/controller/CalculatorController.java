@@ -5,6 +5,7 @@ import com.aegon.calculator.service.CalculatorService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -25,6 +26,7 @@ import javax.validation.Valid;
 @Validated
 @CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api/v1/calc")
+@Slf4j
 public class CalculatorController {
 
     /**
