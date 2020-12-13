@@ -37,7 +37,7 @@ public class CalculatorControllerAdvice {
      */
     @ExceptionHandler(NumberFormatException.class)
     public ResponseEntity<ExceptionResponse> handleCustomerServiceException(NumberFormatException ex) {
-        return new ResponseEntity<>(new ExceptionResponse(ex, "Input should be a Number"), BAD_REQUEST);
+        return new ResponseEntity<>(new ExceptionResponse(ex, "Input should be a number (no decimals)"), BAD_REQUEST);
     }
 
     /**
